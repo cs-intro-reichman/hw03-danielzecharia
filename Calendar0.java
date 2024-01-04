@@ -23,10 +23,6 @@ public class Calendar0 {
 	// Tests the nDaysInMonth function.
 	private static void nDaysInMonthTest(int year) {
 		int days;
-		if(isLeapYear(year))
-			System.out.println(i+" is a leap year");
-		else
-			System.out.println(year+" is a common year");
 
 		for (int i=1; i<13; i++)
 		{

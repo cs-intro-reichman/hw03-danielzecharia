@@ -12,17 +12,22 @@ public class LowerCase {
     */
     public static String lowerCase(String s) {
         // Replace the following statement with your code
-        String sNew=""+s.charAt();
+        String sNew = "";
         char c;
 
-        for(int i=0;i<s.length();i++)
+        for(int i=0; i < s.length(); i++)
         {
-            c=s.charAt(i);
-            if(c>='A'&&c<='z')
-                c=(char)(c-32);
-            sNew= sNew+ c;
+            c = s.charAt(i);
+            if((c >= 'A') && (c <= 'Z'))
+               {
+                 sNew = sNew + (char)(c+32);
+               } 
+            else
+                {
+                    sNew = sNew + c;
+                }
 
         }
-        return null;
+        return sNew;
     }
 }

@@ -12,6 +12,31 @@ public class UniqueChars {
      */
     public static String uniqueChars(String s) {
         // Replace the following statement with your code
-        return null;
+
+    String sNew=""+s.charAt(0);
+    int j=0;
+    boolean found=false;
+
+    for (int i=1; i<s.length();i++)
+    {
+        if (s.charAt(i)==' ')
+            sNew = sNew+s.charAt(i);
+        else
+        {
+                for (int n=0; n<sNew.length();n++)
+                {
+                    if(sNew.charAt(n)==s.charAt(i))
+                        found=true;
+
+                }
+                if(found==false)
+                    sNew = sNew+s.charAt(i);
+                found=false;
+
+
+            }
+        }
+        
+        return sNew;
     }
 }

@@ -69,7 +69,7 @@ public class LoanCalc {
 
     	while (H-L>epsilon)
     	{
-    		if(endBalance (loan, rate, n, H) * endBalance (loan, rate, n, L) > 0)
+    		if(endBalance (loan, rate, n, g) * endBalance (loan, rate, n, L) > 0)
     		{
                L=g;
     		}

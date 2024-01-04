@@ -56,12 +56,12 @@ public class Calendar1 {
 	 					counter++;
 
 	 				if (dayOfWeek=1)
-	 					System.out.println( dayOfMonth+ "/"+ month+"/"+ year+" Sunday");
+	 					System.out.println(dayOfMonth+ "/"+ month+"/"+ year+" Sunday");
 
 	 				else
-	 				System.out.println( dayOfMonth+ "/"+ month+"/"+ year);	
+	 				System.out.println(dayOfMonth+ "/"+ month+"/"+ year);	
 	 			if(dayOfWeek==7)
-	 				dayOfWeek=1;
+	 				dayOfWeek = 1;
 
 	 			else dayOfWeek++;
 

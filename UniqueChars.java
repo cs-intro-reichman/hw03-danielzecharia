@@ -14,7 +14,6 @@ public class UniqueChars {
         // Replace the following statement with your code
 
     String sNew=""+s.charAt(0);
-    int j=0;
     boolean found=false;
 
     for (int i=1; i<s.length();i++)

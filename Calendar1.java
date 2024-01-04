@@ -26,7 +26,7 @@ public class Calendar1 {
 	 		debugDaysCounter++;
 	 		//// If you want to stop the loop after n days, replace the condition of the
 	 		//// if statement with the condition (debugDaysCounter == n)
-	 		if (false) { 
+	 		if (debugDaysCounter==5) { 
 	 			break;
 	 		}
         }
@@ -40,12 +40,10 @@ public class Calendar1 {
 	 // If the month changes, sets the number of days in this month.
 	 // Side effects: changes the static variables dayOfMonth, month, year, dayOfWeek, nDaysInMonth.
 	 private static void advance() {
-	 	System.out.println( day+ "/"+ month+"/"+ year);
-	 	System.out.println( day+ "/"+ month+"/"+ year+" Sunday");
 
 
 	 	int counter=0;
-	 	for (int year=1900; year<20000; year++)
+	 	for (int year=1900; year<2000; year++)
 	 	{
 	 		for (int month=1; month<13; month++)
 	 		{
@@ -55,7 +53,7 @@ public class Calendar1 {
 	 				if(dayOfWeek==1 && dayOfMonth==1)
 	 					counter++;
 
-	 				if (dayOfWeek=1)
+	 				if (dayOfWeek==1)
 	 					System.out.println(dayOfMonth+ "/"+ month+"/"+ year+" Sunday");
 
 	 				else
@@ -66,11 +64,11 @@ public class Calendar1 {
 	 			else dayOfWeek++;
 
 
-
 	 			}
 	 			dayOfMonth=1;
 	 		}
 	 		month=1;
+	 		System.out.println("During the 20th century, "+counter+" Sundays fell on the first day of the month");
 	 	}
 
 

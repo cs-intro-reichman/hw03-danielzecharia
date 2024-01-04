@@ -40,6 +40,7 @@ public class LoanCalc {
 	// Side effect: modifies the class variable iterationCounter.
     public static double bruteForceSolver(double loan, double rate, int n, double epsilon) {  
     	// Replace the following statement with your code
+    	
     	return 0;
     }
     
@@ -50,6 +51,8 @@ public class LoanCalc {
 	* the number of periods (n), and epsilon, a tolerance level.
 	*/
 	// Side effect: modifies the class variable iterationCounter.
+
+
     public static double bisectionSolver(double loan, double rate, int n, double epsilon) {  
     	// Replace the following statement with your code
     	return 0;
@@ -61,6 +64,40 @@ public class LoanCalc {
 	*/
 	private static double endBalance(double loan, double rate, int n, double payment) {
 		// Replace the following statement with your code
-    	return 0;
+		
+		double leftToPay=loan;
+		rate= (rate/100)+1;
+		for (int i=0; i<n;i++)
+		{
+			leftToPay= (leftToPay-payment)*rate;
+
+		}
+
+
+    	return leftToPay;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
 }

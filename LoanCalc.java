@@ -64,14 +64,11 @@ public class LoanCalc {
     	// Replace the following statement with your code
     	Double H = loan;
     	Double L = loan/n;
-    	double checkH,checkL;
     	int iterationCounter = 0;
     	double g= (L+H)/2;
 
     	while (H-L>epsilon)
     	{
-    		checkH = endBalance (loan, rate, n, H);
-    		checkL = endBalance (loan, rate, n, L);
     		if(endBalance (loan, rate, n, H) * endBalance (loan, rate, n, L) > 0)
     		{
                L=g;

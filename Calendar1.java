@@ -33,18 +33,60 @@ public class Calendar1 {
 	 	//// Write the necessary ending code here
 	 }
 	
+	static int dayOfMonth = 1;   
+	static int month = 1;
+	static int year = 1900;
+	static int dayOfWeek = 2;     // 1.1.1900 was a Monday
+	static int nDaysInMonth = 31;
+
+
 	 // Advances the date (day, month, year) and the day-of-the-week.
 	 // If the month changes, sets the number of days in this month.
 	 // Side effects: changes the static variables dayOfMonth, month, year, dayOfWeek, nDaysInMonth.
 	 private static void advance() {
-		// Replace this comment with your code
+	 	System.out.println( day+ "/"+ month+"/"+ year);
+	 	System.out.println( day+ "/"+ month+"/"+ year+" Sunday");
+
+
+	 	int days;
+	 	for (int year=1900; year<20000; year++)
+	 	{
+	 		for (int month=1; month<13; month++)
+	 		{
+	 
+	 			for( int dayOfMonth=1; dayOfMonth<nDaysInMonth+1; dayOfMonth++)
+	 			{
+	 				if (dayOfWeek=1)
+	 					System.out.println( dayOfMonth+ "/"+ month+"/"+ year+" Sunday");
+
+	 				else
+	 				System.out.println( dayOfMonth+ "/"+ month+"/"+ year);	
+	 			if(dayOfWeek==7)
+	 				dayOfWeek=1;
+
+	 			else dayOfWeek++;
+
+
+	 			}
+	 			dayOfMonth=1;
+	 		}
+	 		month=1;
+	 	}
+
+
+		
 	 } 
 		 
     // Returns true if the given year is a leap year, false otherwise.
 	private static boolean isLeapYear(int year) {
 	    // Replace the following statement with your code
-		return false;
-	}
+	    boolean divisible=false;
+	    divisible = ((year % 400 )== 0);
+	    if( divisible || (((year % 4) == 0) && ((year % 100) != 0)))
+	    	return true;
+		else
+			return false;
+		}
 	 
 	// Returns the number of days in the given month and year.
 	// April, June, September, and November have 30 days each.
@@ -52,6 +94,19 @@ public class Calendar1 {
 	// All the other months have 31 days.
 	private static int nDaysInMonth(int month, int year) {
 		// Replace the following statement with your code
-		return 0;
+		if(month==4||month==6||month==9||month==11)
+			return 30;
+		else
+		{
+			if(month==2)
+			{
+				if(isLeapYear(year))
+					return 29;
+				else
+					return 28;
+			}else
+					return 31;
+		}
+		
 	}
 }

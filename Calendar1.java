@@ -33,11 +33,7 @@ public class Calendar1 {
 	 	//// Write the necessary ending code here
 	 }
 	
-	static int dayOfMonth = 1;   
-	static int month = 1;
-	static int year = 1900;
-	static int dayOfWeek = 2;     // 1.1.1900 was a Monday
-	static int nDaysInMonth = 31;
+	
 
 
 	 // Advances the date (day, month, year) and the day-of-the-week.
@@ -58,7 +54,7 @@ public class Calendar1 {
 	 			{
 	 				if(dayOfWeek==1 && dayOfMonth==1)
 	 					counter++;
-	 				
+
 	 				if (dayOfWeek=1)
 	 					System.out.println( dayOfMonth+ "/"+ month+"/"+ year+" Sunday");
 

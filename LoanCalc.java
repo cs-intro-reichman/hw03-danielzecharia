@@ -64,7 +64,7 @@ public class LoanCalc {
     	// Replace the following statement with your code
     	Double H = loan;
     	Double L = loan/n;
-    	int iterationCounter = 0;
+        iterationCounter = 0;
     	double g= (L+H)/2;
 
     	while (H-L>epsilon)

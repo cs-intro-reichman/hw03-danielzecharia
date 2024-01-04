@@ -65,7 +65,7 @@ public class LoanCalc {
     	// Replace the following statement with your code
     	Double H = loan;
     	Double L = loan/n;
-    	double checkH,checkG;
+    	double checkH,checkL;
     	int iterationCounter = 0;
     	double g= (L+H)/2;
 

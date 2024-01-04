@@ -48,7 +48,7 @@ public class Calendar1 {
 	 	System.out.println( day+ "/"+ month+"/"+ year+" Sunday");
 
 
-	 	int days;
+	 	int counter=0;
 	 	for (int year=1900; year<20000; year++)
 	 	{
 	 		for (int month=1; month<13; month++)
@@ -56,6 +56,9 @@ public class Calendar1 {
 	 
 	 			for( int dayOfMonth=1; dayOfMonth<nDaysInMonth+1; dayOfMonth++)
 	 			{
+	 				if(dayOfWeek==1 && dayOfMonth==1)
+	 					counter++;
+	 				
 	 				if (dayOfWeek=1)
 	 					System.out.println( dayOfMonth+ "/"+ month+"/"+ year+" Sunday");
 
@@ -65,6 +68,7 @@ public class Calendar1 {
 	 				dayOfWeek=1;
 
 	 			else dayOfWeek++;
+
 
 
 	 			}

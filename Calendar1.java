@@ -8,6 +8,7 @@ public class Calendar1 {
 	static int year = 1900;
 	static int dayOfWeek = 2;     // 1.1.1900 was a Monday
 	static int nDaysInMonth = 31; // Number of days in January
+	static int counterSunday = 0;
 	
 	/** 
 	 * Prints the calendars of all the years in the 20th century. Also prints the  
@@ -20,13 +21,26 @@ public class Calendar1 {
 	    int debugDaysCounter = 0; 
 	    //// Write the necessary initialization code, and replace the condition
 	    //// of the while loop with the necessary condition 
-	 	while (true) {
-	 		//// Write the body of the while 		
+	 	while (year < 2000) {
+	 		//// Write the body of the while 
+	 		if (dayOfWeek == 1 && dayOfMonth == 1) 
+	 		    {
+	 		    	counterSunday++;
+	 		    }
+	 		if ( dayOfWeek == 1)
+	 		{
+	 			System.out.println(dayOfMonth+ "/"+ month+"/"+ year+" Sunday");
+
+	 		}	
+	 		else
+	 		{
+	 			System.out.println(dayOfMonth+ "/"+ month+"/"+ year);	
+	 		}
 	 		advance();
 	 		debugDaysCounter++;
 	 		//// If you want to stop the loop after n days, replace the condition of the
 	 		//// if statement with the condition (debugDaysCounter == n)
-	 		if (debugDaysCounter==5) { 
+	 		if (false) { 
 	 			break;
 	 		}
         }
@@ -41,38 +55,29 @@ public class Calendar1 {
 	 // Side effects: changes the static variables dayOfMonth, month, year, dayOfWeek, nDaysInMonth.
 	 private static void advance() {
 
+	 	if(dayOfWeek==7)
+	 		dayOfWeek = 1;
+	 	else dayOfWeek++;
 
-	 	int counter=0;
-	 	for (int year=1900; year<2000; year++)
+	 	if ( dayOfMonth == nDaysInMonth (month, year))
 	 	{
-	 		for (int month=1; month<13; month++)
+	 		if (month == 12)
 	 		{
-	 
-	 			for( int dayOfMonth=1; dayOfMonth<nDaysInMonth+1; dayOfMonth++)
-	 			{
-	 				if(dayOfWeek==1 && dayOfMonth==1)
-	 					counter++;
-
-	 				if (dayOfWeek==1)
-	 					System.out.println(dayOfMonth+ "/"+ month+"/"+ year+" Sunday");
-
-	 				else
-	 				System.out.println(dayOfMonth+ "/"+ month+"/"+ year);	
-	 			if(dayOfWeek==7)
-	 				dayOfWeek = 1;
-
-	 			else dayOfWeek++;
-
-
-	 			}
-	 			dayOfMonth=1;
+	 			month == 1;
+	 			year++;
+	 			dayOfMonth = 1;
 	 		}
-	 		month=1;
-	 		System.out.println("During the 20th century, "+counter+" Sundays fell on the first day of the month");
+	 		else
+	 		{
+	 			month++;
+	 			dayOfMonth = 1;
+	 		}
 	 	}
+	 	else
+	 	{
+	 		dayOfMonth++;
 
-
-		
+	 	}	
 	 } 
 		 
     // Returns true if the given year is a leap year, false otherwise.

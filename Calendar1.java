@@ -63,7 +63,7 @@ public class Calendar1 {
 	 	{
 	 		if (month == 12)
 	 		{
-	 			month == 1;
+	 			month = 1;
 	 			year++;
 	 			dayOfMonth = 1;
 	 		}

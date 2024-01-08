@@ -44,7 +44,7 @@ public class Calendar1 {
 	 			break;
 	 		}
         }
-        System.out.println("During the 20th century, "+counterSunday+"" Sundays fell on the first day of the month";
+        System.out.println("During the 20th century, "+counterSunday+" Sundays fell on the first day of the month");
 
 	 	//// Write the necessary ending code here
 	 }

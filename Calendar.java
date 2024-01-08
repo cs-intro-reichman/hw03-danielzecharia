@@ -15,24 +15,25 @@ static int nDaysInMonth = 31; // Number of days in January
 		// Advances the date and the day-of-the-week from 1/1/1900 till 31/12/1999, inclusive.
 	    // Prints each date dd/mm/yyyy in a separate line. If the day is a Sunday, prints "Sunday".
 	    // The following variable, used for debugging purposes, counts how many days were advanced so far.
-	    int debugDaysCounter = 0; 
+	    int whichYear = Integer.parseInt(args[0]);
+	    int debugDaysCounter = 0;
 	    //// Write the necessary initialization code, and replace the condition
 	    //// of the while loop with the necessary condition 
-	 	while (year < 2000) {
-	 		//// Write the body of the while 
-	 		if (dayOfWeek == 1 && dayOfMonth == 1) 
-	 		    {
-	 		    	counterSunday++;
-	 		    }
-	 		if ( dayOfWeek == 1)
+	 	while (year < whichYear)
+	 	 {
+	 	 	advance();
+	 	 }
+	 	 while (year == whichYear)
+	 	 {
+	 	 	if ( dayOfWeek == 1)
 	 		{
 	 			System.out.println(dayOfMonth+ "/"+ month+"/"+ year+" Sunday");
 
-	 		}	
-	 		else
-	 		{
+	 		}
+	 		else{
 	 			System.out.println(dayOfMonth+ "/"+ month+"/"+ year);	
 	 		}
+	 		
 	 		advance();
 	 		debugDaysCounter++;
 	 		//// If you want to stop the loop after n days, replace the condition of the

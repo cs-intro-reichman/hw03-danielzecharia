@@ -12,7 +12,7 @@ public class UniqueChars {
      */
     public static String uniqueChars(String s) {
         // Replace the following statement with your code
-
+        // TODO: ident the code. Should start from here.
     String sNew=""+s.charAt(0);
     boolean found=false;
 

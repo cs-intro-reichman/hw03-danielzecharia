@@ -26,7 +26,7 @@ public class Calendar0 {
 
 		for (int i=1; i<13; i++)
 		{
-			days= nDaysInMonth(i, year);
+			days= nDaysInMonth(i, year); // TODO: put space before '=' again :)
 			System.out.println("Month "+i+" has "+days+" days");
 
 		}

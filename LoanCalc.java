@@ -65,13 +65,13 @@ public class LoanCalc {
     	Double H = loan;
     	Double L = loan/n;
         iterationCounter = 0;
-    	double g= (L+H)/2;
+    	double g= (L+H)/2; // TODO: add space before =
 
     	while (H-L>epsilon)
     	{
     		if(endBalance (loan, rate, n, g) * endBalance (loan, rate, n, L) > 0)
     		{
-               L=g;
+               L=g; // TODO: It's better to add spaces L = g;
     		}
     		else{
     			H=g;

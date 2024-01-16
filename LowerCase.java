@@ -19,7 +19,7 @@ public class LowerCase {
         {
             c = s.charAt(i);
             if((c >= 'A') && (c <= 'Z'))
-               {
+               { // It's not very common identations. See Java Code Style Guide document in the moodle
                  sNew = sNew + (char)(c+32);
                } 
             else
